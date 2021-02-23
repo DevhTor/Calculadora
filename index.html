@@ -2,25 +2,83 @@
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title> Amo A More Mio</title>
+        <title> CALCULADORA </title>
+
+        <style type="text/css">
+            fieldset {background-color:darkslateblue;}
+            legend { color: blue;}
+        </style>
+
+        <script type="text/javascript">
+            
+            function calcular()
+            {
+                var num1 = document.getElementById("num1").value;
+                var num2 = document.getElementById("num2").value;
+
+
+                var select = document.getElementById("operaciones");
+                var opcion = select.options[select.selectedIndex].value;
+                
+                var res = 0;
+
+              
+
+                if(opcion == "suma")
+                {
+                    res = parseInt(num1) + parseInt(num2); 
+                }
+
+                else if(opcion == "resta")
+                {
+                    res = parseInt(num1) - parseInt(num2); 
+                }
+
+                else if(opcion == "multiplicacion")
+                {
+                    res = parseInt(num1) * parseInt(num2); 
+                }
+
+                else if(opcion == "division")
+                {
+                    res = parseFloat(num1) / parseFloat(num2); 
+                }
+                
+
+                document.getElementById("res").innerText=res;
+
+            }
+            
+            
+        </script>
+
     </head>
 
     <body>
-        <h1>Porque Te Amo?</h1>
-        <hr/>
-        <br/>
-        <ul>
-            <li>Porque me haces feliz</li>
-            <li>Porque me preparas comida</li>
-            <li>Porque me besas con dulzura</li>
-            <li>Porque tienes todo lo que le pedi a Dios</li>
-            <li>Porque eres mi verdadera ayuda idonea</li>
-            <li>Porque contigo me siento seguro</li>
-        </ul>
+        <fieldset>
+            <legend> CALCULADORA</legend>
 
-        <hr/>
+            Numero 1: <input type="text" id="num1"/> <br><br>
+            
+            Operacion: 
+            <select id="operaciones">
+                <option value="suma" selected>Suma</option>
+                <option value="resta">Resta</option>
+                <option value="multiplicacion">Multiplicacion</option>
+                <option value="division">Division</option>
+            </select>
+            <br><br>
+            Numero 2: <input type="text" id="num2"/> <br><br>
+            Resultado: <label id="res"></label>
+        </fieldset>
+        <br>
 
-        <img src="https://img.freepik.com/vector-gratis/dibujado-mano-tipografia-letras-te-amo-te-amo-espanol_73950-316.jpg?size=626&ext=jpg"/>
+        
+
+        <button name="btncalcular" type="button" onclick="calcular()"> Calcular </button>
+
+
+
     </body>
 
 </html>
