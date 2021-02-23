@@ -5,8 +5,11 @@
         <title> CALCULADORA </title>
 
         <style type="text/css">
-            fieldset {background-color:darkslateblue;}
-            legend { color: blue;}
+            fieldset {background-image:url("https://cdn.pixabay.com/photo/2020/02/24/18/05/background-4876988_960_720.jpg");}
+            legend { color: blue; background-color: deepskyblue;}
+            label {color: white;}
+            input {color: white; background-color:darkslateblue;}
+            select {color: white; background-color: darkslateblue;}
         </style>
 
         <script type="text/javascript">
@@ -57,10 +60,11 @@
     <body>
         <fieldset>
             <legend> CALCULADORA</legend>
-
-            Numero 1: <input type="text" id="num1"/> <br><br>
             
-            Operacion: 
+            <label>Numero 1: </label>
+            <input type="text" id="num1"/> <br><br>
+            
+            <label>Operacion: </label> 
             <select id="operaciones">
                 <option value="suma" selected>Suma</option>
                 <option value="resta">Resta</option>
@@ -68,14 +72,21 @@
                 <option value="division">Division</option>
             </select>
             <br><br>
-            Numero 2: <input type="text" id="num2"/> <br><br>
-            Resultado: <label id="res"></label>
+
+            <label>Numero 2: 
+            </label> <input type="text" id="num2"/> <br><br>
+
+            <label>Resultado: </label>
+            <label id="res"></label>
+
+            <button name="btncalcular" type="button" onclick="calcular()"> Calcular </button>
+
         </fieldset>
         <br>
 
         
 
-        <button name="btncalcular" type="button" onclick="calcular()"> Calcular </button>
+        
 
 
 
